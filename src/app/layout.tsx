@@ -61,7 +61,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body className={eUkraine.className}>{children}</body>
+      <body className={eUkraine.className}>
+        <main>{children}</main>
+
+        <div id="modal" />
+      </body>
     </html>
   );
 }

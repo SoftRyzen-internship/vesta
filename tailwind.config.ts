@@ -46,6 +46,7 @@ const config: Config = {
           heading: "#1A341B",
           text: "#4A4742",
           desc: "#8B8B8B",
+          backdrop: "rgba(0, 0, 0, 0.8)",
         },
       },
       // FONTS
