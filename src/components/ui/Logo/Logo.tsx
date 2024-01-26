@@ -1,11 +1,9 @@
 import Link from "next/link";
 
-import hero from "@/data/hero-section.json";
+import { LogoType } from "./types";
 
-export interface LogoType {
-  className?: string;
-  onClick?: () => void;
-}
+import hero from "@/data/hero-section.json";
+import Image from "next/image";
 
 export const Logo: React.FC<LogoType> = ({ className, onClick }) => {
   const { logo } = hero;
@@ -16,15 +14,13 @@ export const Logo: React.FC<LogoType> = ({ className, onClick }) => {
       aria-label={logo}
       onClick={onClick}
     >
-      Vesta
-      {/* <Image
+      <Image
         src="/images/logo.webp"
-        width={236}
-        height={36}
-        alt={logo.label}
+        width={182.75}
+        height={63}
+        alt={logo}
         priority
-        className={imageClassName}
-      /> */}
+      />
     </Link>
   );
 };
