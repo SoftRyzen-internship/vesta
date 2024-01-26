@@ -3,21 +3,24 @@
 import { useState } from "react";
 
 import { Modal } from "@/components/ui/Modal";
-import { Portal } from "@/components/ui/Portal";
 
 export const TestClientComponent: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <button onClick={() => setShowModal(true)} type="button">
+      <button onClick={() => setIsOpen(true)} type="button">
         Click
       </button>
 
-      {showModal && (
-        <Portal onModalClose={() => setShowModal(false)}>
-          <Modal onModalClose={() => setShowModal(false)} />
-        </Portal>
-      )}
+      <Modal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="My modal title"
+      >
+        <>
+          <div className="min-w-[280px]">My modal inner view...</div>
+        </>
+      </Modal>
     </>
   );
 };
