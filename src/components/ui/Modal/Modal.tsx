@@ -44,7 +44,7 @@ export const Modal: React.FC<ModalProps> = ({
     const timeout = setTimeout(onClose, 600);
 
     return () => clearTimeout(timeout);
-  }, [modalState]);
+  }, [modalState, onClose]);
 
   return (
     <>
