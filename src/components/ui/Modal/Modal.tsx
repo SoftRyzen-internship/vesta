@@ -15,7 +15,8 @@ export const Modal: React.FC<ModalProps> = ({
   children,
   title,
 }) => {
-  const { closeBtnAriaLabel } = data.modal;
+  const { closeBtnAriaLabel } = data.ui;
+
   return (
     <>
       {/* Use the `Transition` component at the root level */}
