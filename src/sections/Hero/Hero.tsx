@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
   const { title, subtitle, button, info, mail } = hero;
   return (
     <section
-      className={`${css.heroBg} pt-[25px] pb-8 w-[480px] md:pt-8 md:pb-[67px] md:w-[768px] m-auto xl:pb-[65px] xl:w-[1440px] bg-white`}
+      className={`${css.heroBg} pt-[25px] pb-8 md:pt-10 md:pb-[67px] m-auto xl:pb-[65px] xl:bg-[length:1440px_800px] bg-white`}
     >
       <div className="container">
         <Logo className="mb-[112px] md:mb-[368px] xl:mb-[73px]" />
