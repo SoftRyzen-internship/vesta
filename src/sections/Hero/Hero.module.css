@@ -1,0 +1,61 @@
+@media screen and (max-width: 767.9px) {
+  .heroBg {
+    background-image: url("~/public/images/backgrounds/hero/hero-mobile.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-device-pixel-ratio: 2) and (max-width: 767.9px),
+  (-webkit-min-device-pixel-ratio: 2) and (max-width: 767.9px),
+  (min-resolution: 192dpi) and (max-width: 767.9px),
+  (min-resolution: 2dppx) and (max-width: 767.9px) {
+  .heroBg {
+    background-image: url("~/public/images/backgrounds/hero/hero-mobile@2x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.9px) {
+  .heroBg {
+    background-image: url("~/public/images/backgrounds/hero/hero-tablet.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1279.9px),
+  (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1279.9px),
+  (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1279.9px),
+  (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1279.9px) {
+  .heroBg {
+    background-image: url("~/public/images/backgrounds/hero/hero-tablet@2x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heroBg {
+    background-image: url("~/public/images/backgrounds/hero/hero-desktop.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 1280px) and (max-width: 1440px),
+  (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px) and (max-width: 1440px),
+  (min-resolution: 192dpi) and (min-width: 1280px) and (max-width: 1440px),
+  (min-resolution: 2dppx) and (min-width: 1280px) and (max-width: 1440px) {
+  .heroBg {
+    background-image: url("~/public/images/backgrounds/hero/hero-desktop@2x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
