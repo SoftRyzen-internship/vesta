@@ -18,9 +18,16 @@ export const TestClientComponent: React.FC = () => {
         Click
       </button>
 
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title={heading}>
-        <PaymentDetailList />
-      </Modal>
+      {isOpen && (
+        <Modal
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          title={heading}
+          className=" md:w-[580px] xl:w-[694px]"
+        >
+          <PaymentDetailList />
+        </Modal>
+      )}
     </>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 import CloseIcon from "~/icons/cross.svg";
@@ -14,15 +14,45 @@ export const Modal: React.FC<ModalProps> = ({
   onClose,
   children,
   title,
+  className = "",
 }) => {
+  const [modalState, setModalState] = useState<"open" | "close" | "progress">(
+    "progress",
+  );
+
   const { closeBtnAriaLabel } = data.ui;
+
+  const handleClose = () => {
+    setModalState("close");
+  };
+
+  useEffect(() => {
+    // This timeout helps to get transition after component did mount
+
+    if (modalState !== "progress") return;
+
+    const timeout = setTimeout(() => setModalState("open"), 0);
+
+    return () => clearTimeout(timeout);
+  }, [modalState]);
+
+  useEffect(() => {
+    // This timeout helps to get transition before component will unmount
+
+    if (modalState !== "close") return;
+
+    const timeout = setTimeout(onClose, 600);
+
+    return () => clearTimeout(timeout);
+  }, [modalState]);
 
   return (
     <>
       {/* Use the `Transition` component at the root level */}
-      <Transition show={isOpen} as={Fragment}>
-        <Dialog open={isOpen} onClose={onClose} className="relative z-50">
+      <Transition show={modalState === "open"}>
+        <Dialog open={isOpen} onClose={handleClose} className="relative z-50">
           {/* The backdrop, rendered as a fixed sibling to the panel container */}
+
           <div
             className="fixed inset-0 bg-color-modal-backdrop"
             aria-hidden="true"
@@ -35,17 +65,19 @@ export const Modal: React.FC<ModalProps> = ({
               {/* The actual dialog panel with personal transition  */}
               <Transition.Child
                 as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
+                enter="ease-out duration-500"
+                enterFrom="opacity-0 scale-75"
                 enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
+                leave="ease-in duration-300"
                 leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
+                leaveTo="opacity-0 scale-75"
               >
-                <Dialog.Panel className="mx-auto rounded-2xl bg-color-modal-background relative py-12 px-5 md:px-14">
+                <Dialog.Panel
+                  className={`mx-auto rounded-2xl bg-color-modal-background relative py-12 px-5 md:px-14 ${className}`}
+                >
                   <button
                     type="button"
-                    onClick={onClose}
+                    onClick={handleClose}
                     aria-label={closeBtnAriaLabel}
                     className="absolute top-4 right-4 text-color-modal-stroke hover:text-color-modal-stroke/75 focus-visible:text-color-modal-stroke/75 transition-all"
                   >
@@ -53,7 +85,7 @@ export const Modal: React.FC<ModalProps> = ({
                   </button>
 
                   {title && (
-                    <Dialog.Title className="mb-6 md:mb-8 text-color-modal-heading text-[22px] md:text-[28px] font-medium leading-[1.4] xl:text-center">
+                    <Dialog.Title className="mb-6 md:mb-8 text-color-modal-heading text-[22px] md:text-[28px] font-medium leading-[1.4]">
                       {title}
                     </Dialog.Title>
                   )}
