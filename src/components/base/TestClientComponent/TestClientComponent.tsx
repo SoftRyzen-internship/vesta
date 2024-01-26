@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 
-import { Modal, Portal } from "@/components/ui";
+import { Modal } from "@/components/ui/Modal";
+import { Portal } from "@/components/ui/Portal";
 
 export const TestClientComponent: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
