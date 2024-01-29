@@ -21,14 +21,14 @@ export const HeroButton: React.FC = () => {
         type="button"
         label={label}
         onClick={() => setIsOpen(true)}
-        className="mb-16 md:mb-24 xl:mb-[139.5px]"
+        className="md:w-[496px]"
       />
 
       <Modal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         title={heading}
-        className=" md:w-[580px] xl:w-[694px]"
+        className="md:w-[580px] xl:w-[694px]"
       >
         <PaymentDetailList />
       </Modal>
