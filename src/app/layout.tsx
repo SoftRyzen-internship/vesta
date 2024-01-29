@@ -63,8 +63,6 @@ export default function RootLayout({
     <html lang="uk">
       <body className={eUkraine.className}>
         <main>{children}</main>
-
-        <div id="modal" />
       </body>
     </html>
   );
