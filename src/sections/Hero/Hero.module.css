@@ -40,13 +40,7 @@
 
 @media screen and (min-width: 1280px) {
   .heroBg {
-    background-image: linear-gradient(
-        86deg,
-        rgba(13, 13, 13, 0.8) 14.54%,
-        rgba(13, 13, 13, 0.38) 54.04%,
-        rgba(13, 13, 13, 0) 70.33%
-      ),
-      url("~/public/images/backgrounds/hero/hero-desktop.webp");
+    background-image: url("~/public/images/backgrounds/hero/hero-desktop.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1440px 800px;
@@ -57,13 +51,7 @@
   (min-resolution: 192dpi) and (min-width: 1280px),
   (min-resolution: 2dppx) and (min-width: 1280px) {
   .heroBg {
-    background-image: linear-gradient(
-        86deg,
-        rgba(13, 13, 13, 0.8) 14.54%,
-        rgba(13, 13, 13, 0.38) 54.04%,
-        rgba(13, 13, 13, 0) 70.33%
-      ),
-      url("~/public/images/backgrounds/hero/hero-desktop@2x.webp");
+    background-image: url("~/public/images/backgrounds/hero/hero-desktop@2x.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1440px 800px;
