@@ -42,7 +42,7 @@ export const PaymentDetail: React.FC<PaymentDetailProps> = ({
         onClick={handleCopy}
         type="button"
         disabled={copied}
-        className={`min-w-[106px] ml-auto focus-visible:text-color-accent-hover transition-all text-[12px] font-medium leading-[1.5] flex items-center justify-between ${copied ? "text-color-accent-extra" : "text-color-accent-main hover:text-color-accent-hover"}`}
+        className={`min-w-[107px] ml-auto focus-visible:text-color-accent-hover transition-all text-[12px] font-medium leading-[1.5] flex items-center justify-between ${copied ? "text-color-accent-extra" : "text-color-accent-main hover:text-color-accent-hover"}`}
       >
         <CopyIcon className="w-5 h-5" />
         {copied ? copyBtnLabel.active : copyBtnLabel.default}
