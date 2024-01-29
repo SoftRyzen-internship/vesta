@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.field-br {
+  word-break: break-all;
+}
+
+.payment-details > li:not(:last-child) {
+  @apply relative pb-5;
+}
+
+.payment-details > li:not(:last-child)::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-full h-[1px] bg-color-modal-pseudo;
+}

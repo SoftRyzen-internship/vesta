@@ -3,7 +3,6 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   mode: "jit",
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,7 +14,6 @@ const config: Config = {
       sm: "480px",
       md: "768px",
       xl: "1280px",
-      xxl: "1440px",
 
       smOnly: { max: "767.98px" },
       mdOnly: { min: "768px", max: "1279.98px" },
@@ -41,11 +39,16 @@ const config: Config = {
         "color-accent": {
           main: "#F2600C",
           hover: "#F97816",
+          extra: "#C4B3A9",
         },
         "color-modal": {
           heading: "#1A341B",
           text: "#4A4742",
           desc: "#8B8B8B",
+          backdrop: "rgba(0, 0, 0, 0.8)",
+          background: "#fff",
+          stroke: "#929292",
+          pseudo: "#C1C1C1",
         },
       },
       // FONTS
