@@ -22,7 +22,7 @@ export const HeroButton: React.FC = () => {
         type="button"
         label={label.short}
         onClick={() => setIsOpen(true)}
-        className="mb-16 md:mb-24 xl:mb-[139.5px] md:hidden"
+        className="md:hidden"
       />
 
       {/* Tablet & desktop version: */}
@@ -30,14 +30,14 @@ export const HeroButton: React.FC = () => {
         type="button"
         label={label.full}
         onClick={() => setIsOpen(true)}
-        className="mb-16 md:mb-24 xl:mb-[139.5px] hidden md:inline-block"
+        className="hidden md:inline-block md:w-[496px]"
       />
 
       <Modal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         title={heading}
-        className=" md:w-[580px] xl:w-[694px]"
+        className="md:w-[580px] xl:w-[694px]"
       >
         <PaymentDetailList />
       </Modal>
