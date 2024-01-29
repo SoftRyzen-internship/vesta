@@ -28,7 +28,12 @@ export const Hero: React.FC = () => {
         <p className="text-color-text-primary text-sm font-light opacity-80 w-80 md:text-base md:w-[592px] xl:text-lg mt-auto">
           {info}
 
-          <a href={`mailto:${mail}`} className="underline underline-offset-2">
+          <a
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            href={`mailto:${mail}`}
+            className="underline underline-offset-2"
+          >
             {mail}
           </a>
         </p>
