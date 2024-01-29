@@ -17,11 +17,20 @@ export const HeroButton: React.FC = () => {
 
   return (
     <>
+      {/* Mobile version: */}
       <Button
         type="button"
-        label={label}
+        label={label.short}
         onClick={() => setIsOpen(true)}
-        className="mb-16 md:mb-24 xl:mb-[139.5px]"
+        className="mb-16 md:mb-24 xl:mb-[139.5px] md:hidden"
+      />
+
+      {/* Tablet & desktop version: */}
+      <Button
+        type="button"
+        label={label.full}
+        onClick={() => setIsOpen(true)}
+        className="mb-16 md:mb-24 xl:mb-[139.5px] hidden md:inline-block"
       />
 
       <Modal
