@@ -30,7 +30,7 @@ export const Modal: React.FC<ModalProps> = ({
           {/* Full-screen scrollable container */}
           <div className="fixed inset-0 w-screen overflow-y-auto">
             {/* Additional container to handle overflow-y and set full-screen height on mobile */}
-            <div className="smOnly:relative smOnly:h-full smOnly:bg-color-modal-background">
+            <div className="smOnly:relative h-full smOnly:bg-color-modal-background">
               {/* Container to center the panel */}
               <div className="flex min-h-full items-center justify-center md:p-4">
                 {/* The actual dialog panel with personal transition  */}
