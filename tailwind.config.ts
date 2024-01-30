@@ -50,6 +50,7 @@ const config: Config = {
           stroke: "#929292",
           pseudo: "#C1C1C1",
         },
+        "color-bg": "#0D0D0D",
       },
       // FONTS
       fontFamily: {
