@@ -30,7 +30,7 @@ export const Modal: React.FC<ModalProps> = ({
           {/* Full-screen scrollable container */}
           <div className="fixed inset-0 w-screen overflow-y-auto">
             {/* Container to center the panel */}
-            <div className="flex min-h-full items-center justify-center p-4">
+            <div className="flex min-h-full md:items-center justify-center md:p-4">
               {/* The actual dialog panel with personal transition  */}
               <Transition.Child
                 as={Fragment}
@@ -42,22 +42,25 @@ export const Modal: React.FC<ModalProps> = ({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className={`mx-auto rounded-2xl bg-color-modal-background relative py-12 px-5 md:px-14 ${className}`}
+                  className={`mx-auto bg-color-modal-background relative py-12 px-5 md:px-14 ${className}`}
                 >
                   <button
                     type="button"
                     onClick={onClose}
                     aria-label={closeBtnAriaLabel}
-                    className="absolute top-4 right-4 text-color-modal-stroke hover:text-color-modal-stroke/75 focus-visible:text-color-modal-stroke/75 transition-all"
+                    className="absolute z-50 top-4 right-4 text-color-modal-stroke hover:text-color-modal-stroke/75 focus-visible:text-color-modal-stroke/75 transition-all"
                   >
                     <CloseIcon className="w-6 h-6" />
                   </button>
-                  {title && (
-                    <Dialog.Title className="mb-6 md:mb-8 text-color-modal-heading text-[22px] md:text-[28px] font-medium leading-[1.4] xl:text-center">
-                      {title}
-                    </Dialog.Title>
-                  )}
-                  {children}
+
+                  <div>
+                    {title && (
+                      <Dialog.Title className="mb-6 md:mb-8 text-color-modal-heading text-[22px] md:text-[28px] font-medium leading-[1.4] xl:text-center">
+                        {title}
+                      </Dialog.Title>
+                    )}
+                    {children}
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>

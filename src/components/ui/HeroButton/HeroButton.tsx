@@ -37,7 +37,7 @@ export const HeroButton: React.FC = () => {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         title={heading}
-        className="md:w-[580px] xl:w-[694px]"
+        className="smOnly:flex items-center justify-center w-full smOnly:min-h-screen md:w-[580px] xl:w-[694px] md:rounded-2xl"
       >
         <PaymentDetailList />
       </Modal>
