@@ -42,7 +42,7 @@ export const Modal: React.FC<ModalProps> = ({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className={`mx-auto overflow-y-scroll  bg-color-modal-background relative py-12 px-5 md:px-14 ${className}`}
+                  className={`mx-auto bg-color-modal-background relative py-12 px-5 md:px-14 ${className}`}
                 >
                   <button
                     type="button"
