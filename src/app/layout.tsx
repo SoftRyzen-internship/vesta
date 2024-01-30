@@ -61,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body className={eUkraine.className}>
+      <body className={`${eUkraine.className} bg-color-bg`}>
         <main>{children}</main>
       </body>
     </html>
